@@ -135,3 +135,16 @@
 .circle {
     margin-top: 20px;
 }
+
+.group {
+    margin-top: 50px;
+}
+
+.groups {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FDD1D5;
+    padding: 20px;
+}
+
