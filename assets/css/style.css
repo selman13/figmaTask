@@ -27,8 +27,8 @@
 }
 
 .categories .category .circle {
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
   border-radius: 50%;
   border: 1px solid;
   display: flex;
@@ -190,15 +190,18 @@
   font-size: 14px;
 }
 
+.groupImg {
+  padding: 20px 40px;
+}
+
 .group {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .groups {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #FDD1D5;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdd1d5;
+  padding: 20px;
 }
-
