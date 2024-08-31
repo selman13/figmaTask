@@ -20,6 +20,15 @@ body {
 
 /* NAVBAR STYLE END */
 
+.carousel-caption {
+  position: absolute;
+  bottom: 30%;
+  left: 50px;
+  right: 50px;
+  text-align: left;
+  padding: 20px;}
+
+
 /* CATEGORIES STYLE START */
 
 .categories-header {
@@ -168,7 +177,8 @@ body {
 }
 
 .circlePhotos .circlePhoto img {
-  width: 200px;
+  width: 250px;
+  height: 250px;
 }
 
 /* CIRCLE CARDS STYLE END */
@@ -248,22 +258,38 @@ body {
 /* FOOTER STYLE END */
 
 @media (max-width: 768px) {
+
+  .carousel-caption {
+    top: 5%;
+    left: 20px;
+    right: 20px;
+    text-align: center; 
+  }
+
+  .carousel-caption h5 {
+    font-size: 18px; 
+  }
+
+  .carousel-caption p {
+    font-size: 14px; 
+  }
+
+  .carousel-caption .btn {
+    font-size: 14px; 
+  }
+
   .categories {
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .categories .category {
-    flex: 1 1 100%;
-    max-width: 100%;
+  .circlePhoto {
+    width: 45%;
+    margin-bottom: 20px;
   }
 
-  .circle {
-    justify-content: center;
-  }
-
-  .circle .circlePhoto {
-    flex: 1 1 100%;
-    max-width: 100%;
+  .circlePhoto img {
+    width: 250px;
+    height: 250px;
   }
 
   .groups {
@@ -302,4 +328,27 @@ body {
   .arrow {
     display: none;
   }
+}
+
+
+@media (max-width: 600px){
+  .categories {
+    justify-content: center;
+  }
+
+  .categories .category {
+    flex: 1 1 100%;
+    max-width: 100%;
+  } 
+
+  .circlePhoto {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .circlePhoto img {
+    width: 100px;
+    height: 100px;
+  }
+
 }
