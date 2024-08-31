@@ -8,15 +8,30 @@
   list-style: none;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+/* NAVBAR STYLE START */
+
+.hover:hover {
+  border-bottom: 1px solid red;
+}
+
+/* NAVBAR STYLE END */
+
+/* CATEGORIES STYLE START */
+
 .categories-header {
-  margin: 50px 0px 50px 0px;
+  margin: 50px 0px;
   padding: 40px 0px;
 }
 
 .categories {
-  margin: 50px 0px 50px 0px;
+  margin: 50px 0px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .categories .category {
@@ -24,6 +39,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
+  flex: 1 1 150px;
+  max-width: 180px;
 }
 
 .categories .category .circle {
@@ -40,6 +58,10 @@
   width: 50px;
 }
 
+/* CATEGORIES STYLE END */
+
+/* SLIDER CARDS STYLE START */
+
 .flex {
   margin-top: 50px;
   width: 100%;
@@ -54,13 +76,19 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .eventText p {
   font-weight: 600;
 }
 
-.card-container {
+.card-wrapper {
+  display: flex;
+  align-items: center;
   position: relative;
-  width: 100%;
+}
+
+.card-container {
+  flex: 1;
   overflow: hidden;
 }
 
@@ -70,20 +98,13 @@
   position: relative;
 }
 
-/* Swiper tənzimləmələri */
-
 .swiper-slide {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-}
-
-.card {
-  border: none;
-  outline: none;
-  box-shadow: none;
+  width: 100%;
 }
 
 .card img.photo {
@@ -100,37 +121,43 @@
   margin: 5px 5px;
 }
 
-/* Arrow tənzimləmələri */
 .arrow {
   position: absolute;
-  top: 70%;
-  width: 30px;
-  height: 30px;
+  top: 85%;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.arrow img {
+  width: 100%;
+  height: auto;
+}
+
 .prev-arrow {
-  left: 10px;
+  left: -40px;
   display: none;
-  z-index: 1;
 }
 
 .next-arrow {
-  right: 10px;
-  display: block;
-  z-index: 1;
+  right: -40px;
 }
 
-.swiper-pagination-bullet {
-  background: #000;
+/* SLIDER CARDS STYLE END */
+
+/* CIRCLE CARDS STYLE START */
+
+.circle {
+  margin-top: 20px;
 }
 
 .circlePhotos {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .circlePhotos .circlePhoto {
@@ -144,9 +171,30 @@
   width: 200px;
 }
 
-.circle {
-  margin-top: 20px;
+/* CIRCLE CARDS STYLE END */
+
+/* GROUP STYLE START */
+
+.groups {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdd1d5;
+  padding: 20px;
 }
+
+.groupImg {
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+.group {
+  margin-top: 50px;
+}
+
+/* GROUP STYLE END */
+
+/* FOOTER STYLE START */
 
 .footer-header {
   width: 100%;
@@ -154,19 +202,23 @@
   margin-top: 50px;
   padding: 20px 120px;
 }
+
 .footer-menu {
   display: flex;
   justify-content: end;
 }
+
 .footer-menu ul {
   display: flex;
   gap: 20px;
   color: #fff;
 }
+
 .footer-menu ul li {
   font-weight: 300;
   font-size: 16px;
 }
+
 .footer-menu ul li span {
   color: rgb(126, 121, 121);
 }
@@ -176,32 +228,78 @@
   justify-content: space-between;
   padding: 20px 0px 5px 0px;
 }
+
 .footer-contact h1 {
   color: #fff;
   font-size: 18px;
 }
+
 .footer-contact div i {
   margin-right: 5px;
   color: #fff;
 }
+
 .footer-contact div a {
   text-decoration: none;
   color: #fff;
   font-size: 14px;
 }
 
-.groupImg {
-  padding: 20px 40px;
-}
+/* FOOTER STYLE END */
 
-.group {
-  margin-top: 50px;
-}
+@media (max-width: 768px) {
+  .categories {
+    justify-content: center;
+  }
 
-.groups {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fdd1d5;
-  padding: 20px;
+  .categories .category {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .circle {
+    justify-content: center;
+  }
+
+  .circle .circlePhoto {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .groups {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .groupImg {
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  .groupText {
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  .btn {
+    margin: 20px 0;
+  }
+
+  .footer-header {
+    padding: 20px 10px;
+  }
+
+  .footer-menu {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-menu ul {
+    gap: 10px;
+  }
+
+  .arrow {
+    display: none;
+  }
 }
