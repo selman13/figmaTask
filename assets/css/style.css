@@ -259,24 +259,8 @@ body {
 
 @media (max-width: 768px) {
 
-  .carousel-caption {
-    top: 5%;
-    left: 20px;
-    right: 20px;
-    text-align: center; 
-  }
 
-  .carousel-caption h5 {
-    font-size: 18px; 
-  }
-
-  .carousel-caption p {
-    font-size: 14px; 
-  }
-
-  .carousel-caption .btn {
-    font-size: 14px; 
-  }
+ 
 
   .categories {
     grid-template-columns: repeat(3, 1fr);
@@ -332,6 +316,27 @@ body {
 
 
 @media (max-width: 600px){
+  
+
+ .carousel-caption {
+    top: 5%;
+    left: 20px;
+    right: 20px;
+    text-align: center; 
+  }
+
+  .carousel-caption h5 {
+    font-size: 18px; 
+  }
+
+  .carousel-caption p {
+    font-size: 14px; 
+  }
+
+  .carousel-caption .btn {
+    font-size: 14px; 
+  } 
+
   .categories {
     justify-content: center;
   }
